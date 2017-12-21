@@ -106,19 +106,29 @@ private void stopAll() {
 
 	if(webRtcEndpoint!=null) {
 		webRtcEndpoint.release();
+		webRtcEndpoint = null;
 	}
 
 	if(mixer!=null) {
 		mixer.release();
+		mixer = null;
 	}
 	if(outHubPort!=null) {
 		outHubPort.release();
+		outHubPort = null;
 	}
 	if(extra!=null) {
 		extra.release();
+		extra = null;
 	}
 	if(longVideo!=null) {
 		longVideo.release();
+		longVideo = null;
+	}
+
+	if(pipeline!=null) {
+		pipeline.release();
+		pipeline = null;
 	}
 }
 
